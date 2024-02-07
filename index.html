@@ -3,12 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>Document</title>
 </head>
 <body>
-
-
-    
-    <script src="myscripts.js"></script>
+    <div class="container">
+        <div class="title">
+            <h1>Rock Paper Scissors</h1>
+        </div>
+        <div class="soreboard">
+            <div class="player-score">Player Score: 0</div>
+            <div class="computer-score">Computer Score: 0</div>
+        </div>
+        <div class="choices">
+            <div class="weapon" id="rock">
+                <i class="far fa-hand-rock fa-3x"></i>
+            </div>
+            <div class="weapon" id="paper">
+                <i class="fa-regular fa-hand fa-3x"></i>
+            </div>
+            <div class="weapon" id="scissors">
+                <i class="fa-regular fa-hand-scissors fa-3x"></i>
+            </div>
+        </div>
+        <div class="result" id="result">
+            <p>Choose your weapon!</p>
+        </div>
+        <div class="computer-choice"></div>
+        <button class="play-again" id="play-again">Play Again</button>
+    </div>
+   <!--<script src="myscripts.js"></script> -->
 </body>
 </html>

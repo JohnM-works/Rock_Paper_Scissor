@@ -1,0 +1,26 @@
+.choices {
+    display: flex;
+    margin-top: 3rem;
+  }
+
+.weapon {
+    border: 2px solid #660033;
+    border-radius: 10px;
+    margin: 0 2rem;
+    padding: 2rem;
+    background-color: #FFFFFF;
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .weapon:hover {
+    transform: scale(1.1);
+  }
+  
+  .weapon:active {
+    transform: scale(0.9);
+  }
+  

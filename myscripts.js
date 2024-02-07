@@ -3,25 +3,6 @@ function getComputerChoice() {
   return choice[Math.floor(Math.random() * choice.length)];
 }
 
-/* if (lowerCase == computerSelection) {
-    return console.log("You Tied!, try again");
-  } else if (lowerCase == "rock" && computerSelection == "paper") {
-    return console.log("You Lose! Paper beats Rock");
-  } else if (lowerCase == "rock" && computerSelection === "scissor") {
-    return console.log("You Win! Rock beats Scissor");
-  } else if (lowerCase == "paper" && computerSelection === "rock") {
-    return console.log("You Win! Paper beats Rock");
-  } else if (lowerCase == "paper" && computerSelection === "scissor") {
-    return console.log("You Lose! Scissor beats Paper");
-  } else if (lowerCase == "scissor" && computerSelection === "paper") {
-    return console.log("You Win! Scissor beats Paper");
-  } else if (lowerCase == "scissor" && computerSelection === "rock") {
-    return console.log("You Lose! Rock beats Scissor");
-  } else {
-    return console.log("Please enter Rock, Paper, or Scissor");
-  }
-} --> */
-
 let playerScore = 0;
 let computerScore = 0;
 
