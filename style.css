@@ -1,5 +1,8 @@
 .choices {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     margin-top: 3rem;
   }
 
@@ -11,9 +14,6 @@
     background-color: #FFFFFF;
     transition: transform 0.2s ease-in-out;
     cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
   
   .weapon:hover {
