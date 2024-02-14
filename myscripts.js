@@ -17,19 +17,19 @@ function getComputerChoice() {
 
 function playRound(playerSelection, computerSelection) {
   if (playerSelection === "rock") {
-    playerChoice.className = "far fa-hand-rock fa-3x";
+    playerChoice.className = "fa-solid fa-hand-rock fa-10x";
   } else if (playerSelection === "paper") {
-    playerChoice.className = "fa-regular fa-hand fa-3x";
+    playerChoice.className = "fa-solid fa-hand fa-10x";
   } else if (playerSelection === "scissors") {
-    playerChoice.className = "fa-regular fa-hand-scissors fa-3x";
+    playerChoice.className = "fa-solid fa-hand-scissors fa-10x";
   }
 
   if (computerSelection === "rock") {
-    computerChoice.className = "far fa-hand-rock fa-3x";
+    computerChoice.className = "fa-solid fa-hand-rock fa-10x";
   } else if (computerSelection === "paper") {
-    computerChoice.className = "fa-regular fa-hand fa-3x";
+    computerChoice.className = "fa-solid fa-hand fa-10x";
   } else if (computerSelection === "scissors") {
-    computerChoice.className = "fa-regular fa-hand-scissors fa-3x";
+    computerChoice.className = "fa-solid fa-hand-scissors fa-10x";
   }
 
   if (playerSelection == computerSelection) {
@@ -71,8 +71,8 @@ function resetGame() {
   computerResult.textContent = "Computer Score: 0";*/
   scoreResult.textContent = "0 : 0";
   gameResult.textContent = "Choose your weapon!";
-  computerChoice.className = "fa-regular fa-hand fa-3x";
-  playerChoice.className = "fa-regular fa-hand fa-3x";
+  computerChoice.className = "fa-solid fa-hand fa-10x";
+  playerChoice.className = "fa-solid fa-hand fa-10x";
   EnabledWeapon();
 }
 
