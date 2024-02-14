@@ -6,11 +6,79 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #E6E6FA;
+  background-color: #0089BA;
 }
+
 
 .title {
   text-align: center;
+  color: white;
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+  font-size: 2.5rem;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid #B00000;
+  padding: 0.3rem 3rem;
+  font-size: 2rem;
+  background-color: #B00000;
+  color: white;
+  position: relative;
+  right: -4rem;
+}
+
+.computer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid #B00000;
+  padding: 0.3rem 1rem;
+  font-size: 2rem;
+  background-color: #B00000;
+  color: white;
+  position: relative;
+  left: -4rem;
+}
+
+.scores {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 5rem;
+  border-style: solid;
+  padding: 0 2rem;
+  border-radius: 10px;
+  z-index: -1;
+}
+
+.game-output {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.player-choice {
+  border: 2px solid #660033;
+  border-radius: 10px;
+  margin: 0 2rem;
+  padding: 2rem;
+  transform: scaleX(-1);
+  background-color: #FFFFFF;
+}
+
+.computer-choice {
+  border: 2px solid #660033;
+  border-radius: 10px;
+  margin: 0 2rem;
+  padding: 2rem;
+  background-color: #FFFFFF;
 }
 
 .result {
@@ -63,4 +131,4 @@ body {
     font-size: 1.5rem;
     cursor: pointer;
     transition: background-color 0.2s ease-in-out;
-  }
+  } 

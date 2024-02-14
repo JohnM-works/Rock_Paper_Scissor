@@ -3,8 +3,9 @@ const computerChoice = document.querySelector("#computer-output-choice");
 const playerChoice = document.querySelector("#player-output-choice");
 const gameResult = document.querySelector(".result");
 const playAgain = document.querySelector(".play-again");
-const playerResult = document.querySelector(".player-score");
-const computerResult = document.querySelector(".computer-score");
+/*const playerResult = document.querySelector(".player-score");
+const computerResult = document.querySelector(".computer-score");*/
+const scoreResult = document.querySelector(".scores");
 
 let playerScore = 0;
 let computerScore = 0;
@@ -40,11 +41,11 @@ function playRound(playerSelection, computerSelection) {
   ) {
     computerScore++;
     gameResult.textContent = `You Lose! ${playerSelection} beats ${computerSelection}`;
-    computerResult.textContent = `Computer Score: ${computerScore}`;
+    scoreResult.textContent = `${playerScore} : ${computerScore}`;
   } else {
     playerScore++;
     gameResult.textContent = `You Win! ${playerSelection} beats ${computerSelection}`;
-    playerResult.textContent = `Player Score: ${playerScore}`;
+    scoreResult.textContent = `${playerScore} : ${computerScore}`;
   }
 
   if (playerScore === 5) {
@@ -54,7 +55,6 @@ function playRound(playerSelection, computerSelection) {
   if (computerScore === 5) {
     gameResult.textContent = "Game Over! Computer Wins the game.";
     disabledWeapon();
-    outputSelection();
   }
 }
 
@@ -67,11 +67,12 @@ function selectWeapon() {
 function resetGame() {
   playerScore = 0;
   computerScore = 0;
-  playerResult.textContent = "Player Score: 0";
-  computerResult.textContent = "Computer Score: 0";
+  /*playerResult.textContent = "Player Score: 0";
+  computerResult.textContent = "Computer Score: 0";*/
+  scoreResult.textContent = "0 : 0";
   gameResult.textContent = "Choose your weapon!";
-  computerChoice.className = "";
-  playerChoice.className = "";
+  computerChoice.className = "fa-regular fa-hand fa-3x";
+  playerChoice.className = "fa-regular fa-hand fa-3x";
   EnabledWeapon();
 }
 
