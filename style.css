@@ -130,30 +130,10 @@ body {
 .weapon:active {
   transform: scale(0.9);
 }
-  
-.play-again {
-  display: block;
-  margin: 3rem auto 1rem auto;
-  padding: 1rem 2rem;
-  border: solid;
-  border-radius: 10px;
-  background-color: #0081CF;
-  color: #FFFFFF;
-  font-size: 1.5rem;
-  cursor: pointer;
-} 
-
-.play-again:hover{
-  background-color: #2C73D2;
-  transform: scale(1.1);
-}
-
-play-again:active {
-  transform: scale(0.9);
-}
 
 .modal {
-  display: none;
+  visibility: hidden;
+  display: flex;
   justify-content: center;
   align-items: center;
   position: fixed;
@@ -175,7 +155,7 @@ play-again:active {
   margin: 15% auto;
   padding: 1.25rem;
   border: 1px solid #888;
-  width: 30%;
+  width: 50%;
 }
 
 .close {
@@ -190,4 +170,25 @@ play-again:active {
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+.play-again {
+  display: block;
+  margin: 3rem auto 1rem auto;
+  padding: 1rem 2rem;
+  border: solid;
+  border-radius: 10px;
+  background-color: #0081CF;
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  cursor: pointer;
+} 
+
+.play-again:hover{
+  background-color: #2C73D2;
+  transform: scale(1.1);
+}
+
+play-again:active {
+  transform: scale(0.9);
 }

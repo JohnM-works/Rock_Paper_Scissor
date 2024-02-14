@@ -19,19 +19,19 @@ function getComputerChoice() {
 
 function playRound(playerSelection, computerSelection) {
   if (playerSelection === "Rock") {
-    playerChoice.className = "fa-solid fa-hand-rock fa-10x";
+    playerChoice.className = "fa-solid fa-hand-rock fa-8x";
   } else if (playerSelection === "Paper") {
-    playerChoice.className = "fa-solid fa-hand fa-10x";
+    playerChoice.className = "fa-solid fa-hand fa-8x";
   } else if (playerSelection === "Scissors") {
-    playerChoice.className = "fa-solid fa-hand-scissors fa-10x";
+    playerChoice.className = "fa-solid fa-hand-scissors fa-8x";
   }
 
   if (computerSelection === "Rock") {
-    computerChoice.className = "fa-solid fa-hand-rock fa-10x";
+    computerChoice.className = "fa-solid fa-hand-rock fa-8x";
   } else if (computerSelection === "Paper") {
-    computerChoice.className = "fa-solid fa-hand fa-10x";
+    computerChoice.className = "fa-solid fa-hand fa-8x";
   } else if (computerSelection === "Scissors") {
-    computerChoice.className = "fa-solid fa-hand-scissors fa-10x";
+    computerChoice.className = "fa-solid fa-hand-scissors fa-8x";
   }
 
   if (playerSelection == computerSelection) {
@@ -49,20 +49,20 @@ function playRound(playerSelection, computerSelection) {
   } else {
     playerScore++;
     gameResult.textContent = `You Win! ${playerSelection} beats ${computerSelection}`;
-    gameResult.style.color = "blue";
+    gameResult.style.color = "yellow";
     scoreResult.textContent = `${playerScore} : ${computerScore}`;
   }
 
   if (playerScore === 5) {
     textResult.textContent = "Congratulations! You Win the game.";
     textResult.style.color = "white";
-    modalDisplay.style.display = "block";
+    modalDisplay.style.visibility = "visible";
     disabledWeapon();
   }
   if (computerScore === 5) {
     textResult.textContent = "Game Over! You lose the game.";
     textResult.style.color = "red";
-    modalDisplay.style.display = "block";
+    modalDisplay.style.visibility = "visible";
     disabledWeapon();
   }
 }
@@ -78,10 +78,11 @@ function resetGame() {
   computerScore = 0;
   scoreResult.textContent = "0 : 0";
   gameResult.textContent = "Choose your weapon!";
-  computerChoice.className = "fa-solid fa-hand fa-10x";
-  playerChoice.className = "fa-solid fa-hand fa-10x";
+  computerChoice.className = "fa-solid fa-circle-question fa-8x";
+  playerChoice.className =
+    "fa-solid fa-circle-question fa-flip-horizontal fa-8x";
   gameResult.style.color = "white";
-  modalDisplay.style.display = "none";
+  modalDisplay.style.visibility = "hidden";
   EnabledWeapon();
 }
 
