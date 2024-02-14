@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <title>Document</title>
+    <title>Rock Paper Scissors</title>
+    <link rel="icon" href="https://thumb.ac-illust.com/ff/ff13e9be829ded86ef5253eed6504943_w.jpeg"
+          type="image/x-icon">
+ 
 </head>
 <body>
     <div class="container">
@@ -20,6 +23,9 @@
             <div class="scores">0 : 0</div>
             <div class="computer">Computer</div>
         </div>
+        <div class="result" id="result">
+            <p>Choose your weapon!</p>
+        </div>
         <div class="game-output">
             <div class="player-choice">
                 <i class="fa-solid fa-hand fa-10x" id="player-output-choice"></i>
@@ -29,24 +35,27 @@
             </div>
         </div>
         <div class="choices">
-            <div class="weapon" id="rock">
+            <div class="weapon" id="Rock">
                 <i class="fa-solid fa-hand-rock fa-3x"></i>
             </div>
-            <div class="weapon" id="paper">
+            <div class="weapon" id="Paper">
                 <i class="fa-solid fa-hand fa-3x"></i>
             </div>
-            <div class="weapon" id="scissors">
+            <div class="weapon" id="Scissors">
                 <i class="fa-solid fa-hand-scissors fa-3x"></i>
             </div>
         </div>
-        <div class="result" id="result">
-            <p>Choose your weapon!</p>
-        </div>
-
-        <button class="play-again" id="play-again">Play Again</button>
-        
     </div>
 
+    <!--modal-->
+    <div class="modal">
+        <div class="modal-content">
+            <p class="text-result"></p>
+            <button class="play-again" id="play-again">Play Again</button>
+        </div>
+    </div>
+
+    <!--Script-->
     <script src="myscripts.js"></script>
 
 </body>

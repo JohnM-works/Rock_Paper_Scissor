@@ -6,54 +6,63 @@ const playAgain = document.querySelector(".play-again");
 /*const playerResult = document.querySelector(".player-score");
 const computerResult = document.querySelector(".computer-score");*/
 const scoreResult = document.querySelector(".scores");
+const modalDisplay = document.querySelector(".modal");
+const textResult = document.querySelector(".text-result");
 
 let playerScore = 0;
 let computerScore = 0;
 
 function getComputerChoice() {
-  let choice = ["rock", "paper", "scissors"];
+  let choice = ["Rock", "Paper", "Scissors"];
   return choice[Math.floor(Math.random() * choice.length)];
 }
 
 function playRound(playerSelection, computerSelection) {
-  if (playerSelection === "rock") {
+  if (playerSelection === "Rock") {
     playerChoice.className = "fa-solid fa-hand-rock fa-10x";
-  } else if (playerSelection === "paper") {
+  } else if (playerSelection === "Paper") {
     playerChoice.className = "fa-solid fa-hand fa-10x";
-  } else if (playerSelection === "scissors") {
+  } else if (playerSelection === "Scissors") {
     playerChoice.className = "fa-solid fa-hand-scissors fa-10x";
   }
 
-  if (computerSelection === "rock") {
+  if (computerSelection === "Rock") {
     computerChoice.className = "fa-solid fa-hand-rock fa-10x";
-  } else if (computerSelection === "paper") {
+  } else if (computerSelection === "Paper") {
     computerChoice.className = "fa-solid fa-hand fa-10x";
-  } else if (computerSelection === "scissors") {
+  } else if (computerSelection === "Scissors") {
     computerChoice.className = "fa-solid fa-hand-scissors fa-10x";
   }
 
   if (playerSelection == computerSelection) {
     gameResult.textContent = "You Tied! Choose weapon again";
+    gameResult.style.color = "white";
   } else if (
-    (playerSelection === "rock" && computerSelection === "paper") ||
-    (playerSelection === "paper" && computerSelection === "scissors") ||
-    (playerSelection === "scissors" && computerSelection === "rock")
+    (playerSelection === "Rock" && computerSelection === "Paper") ||
+    (playerSelection === "Paper" && computerSelection === "Scissors") ||
+    (playerSelection === "Scissors" && computerSelection === "Rock")
   ) {
     computerScore++;
-    gameResult.textContent = `You Lose! ${playerSelection} beats ${computerSelection}`;
+    gameResult.textContent = `You Lose! ${computerSelection} beats ${playerSelection}`;
+    gameResult.style.color = "red";
     scoreResult.textContent = `${playerScore} : ${computerScore}`;
   } else {
     playerScore++;
     gameResult.textContent = `You Win! ${playerSelection} beats ${computerSelection}`;
+    gameResult.style.color = "blue";
     scoreResult.textContent = `${playerScore} : ${computerScore}`;
   }
 
   if (playerScore === 5) {
-    gameResult.textContent = "Game Over! You Win the game.";
+    textResult.textContent = "Congratulations! You Win the game.";
+    textResult.style.color = "white";
+    modalDisplay.style.display = "block";
     disabledWeapon();
   }
   if (computerScore === 5) {
-    gameResult.textContent = "Game Over! Computer Wins the game.";
+    textResult.textContent = "Game Over! You lose the game.";
+    textResult.style.color = "red";
+    modalDisplay.style.display = "block";
     disabledWeapon();
   }
 }
@@ -67,12 +76,12 @@ function selectWeapon() {
 function resetGame() {
   playerScore = 0;
   computerScore = 0;
-  /*playerResult.textContent = "Player Score: 0";
-  computerResult.textContent = "Computer Score: 0";*/
   scoreResult.textContent = "0 : 0";
   gameResult.textContent = "Choose your weapon!";
   computerChoice.className = "fa-solid fa-hand fa-10x";
   playerChoice.className = "fa-solid fa-hand fa-10x";
+  gameResult.style.color = "white";
+  modalDisplay.style.display = "none";
   EnabledWeapon();
 }
 
